@@ -64,6 +64,8 @@ ADD \
 
 ADD \
 	includes/resolver.conf \
+	includes/log-formats.conf \
+	includes/proxy-cache-paths.conf \
 	/etc/nginx/conf.d/includes/
 
 ADD nginx.conf /etc/nginx/nginx.conf
