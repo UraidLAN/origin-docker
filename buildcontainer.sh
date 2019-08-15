@@ -1,6 +1,6 @@
 #!/bin/bash
 set +e
-REMOTE=opensourcelan
+REMOTE=uraidlan
 . common.sh
 
 TS=$(gettimestamp)

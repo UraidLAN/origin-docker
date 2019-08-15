@@ -8,4 +8,4 @@ mkdir -p /data/data /data/logs
 docker rm -f $NAME
 [[ -n "$CADIR" ]] && echo "Using this directory for the TLS certificates: ${CADIR}"
 
-docker run --name $NAME -d --restart=always -p 80:80 -p 8444:8444 -v /data/data:/cache -v /data/logs:/var/log/nginx $CADIR $IMAGE
+docker run --name $NAME -d --restart=always --net=host -v /data/data:/cache -v /data/logs:/var/log/nginx $CADIR $IMAGE
