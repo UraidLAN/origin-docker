@@ -38,6 +38,7 @@ COPY --from=0 /etc/nginx/mime.types /etc/nginx/mime.types
 
 RUN mkdir -p \
 	/etc/nginx/conf.d \
+	/etc/nginx/conf.d/includes \
         /etc/nginx/ssl/epic \
 	/var/lib/nginx/body \
 	/var/lib/nginx/fastcgi \
@@ -60,6 +61,10 @@ ADD \
         uplay.conf \
         epic.conf \
 	/etc/nginx/conf.d/
+
+ADD \
+	includes/resolver.conf \
+	/etc/nginx/conf.d/includes/
 
 ADD nginx.conf /etc/nginx/nginx.conf
 
