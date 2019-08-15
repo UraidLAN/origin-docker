@@ -48,18 +48,18 @@ RUN mkdir -p \
 
 
 ADD \
-	origin.conf \
-	steam.conf \
-	blizzard.conf \
-	league.conf \
-	wargaming.conf \
-	sony.conf \
-	microsoft.conf \
-	hirez.conf \
-	catch_all.conf \
-	static.conf \
-        uplay.conf \
-        epic.conf \
+	caches/blizzard.conf \
+	caches/catch_all.conf \
+        caches/epic.conf \
+	caches/hirez.conf \
+	caches/league.conf \
+	caches/microsoft.conf \
+	caches/origin.conf \
+	caches/sony.conf \
+	caches/static.conf \
+	caches/steam.conf \
+	caches/uplay.conf \
+	caches/wargaming.conf \
 	/etc/nginx/conf.d/
 
 ADD \
